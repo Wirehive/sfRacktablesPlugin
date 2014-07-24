@@ -136,7 +136,14 @@ class sfRacktables
 
     $arguments['method'] = $method;
 
-    return $this->callAPI($arguments);
+    $data = $this->callAPI($arguments);
+
+    if (array_key_exists('error', $data))
+    {
+      return $data;
+    }
+
+    return $data['response'];
   }
 
 
