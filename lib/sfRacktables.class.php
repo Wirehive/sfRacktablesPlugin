@@ -115,6 +115,13 @@ class sfRacktables
   }
 
 
+  /**
+   * Magic method to call the API functions
+   *
+   * @param string $method Method to call
+   * @param array $arguments Associative array of arguments to pass to the method call
+   * @return array
+   */
   public function __call($method, $arguments = null)
   {
     if ($arguments === null)
@@ -133,6 +140,12 @@ class sfRacktables
   }
 
 
+  /**
+   * Perform the remote API call
+   *
+   * @param array $params
+   * @return array
+   */
   protected function callAPI($params)
   {
     $ch = curl_init();
