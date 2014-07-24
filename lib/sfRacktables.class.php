@@ -16,40 +16,40 @@
  * @method array get_ipv4space() get overall IPv4 space
  * @method array get_ipv6space() get overall IPv6 space
  * @method array get_ipv4network(array('network_id')) get a single IPv4 network
- * @method array allocate_ipv4(array('name' 'network' 'domain' 'vlan' 'connected')) allocate an ipv4 network
+ * @method array allocate_ipv4(array('name', 'network', 'domain', 'vlan', 'connected')) allocate an ipv4 network
  * @method array get_vlan_domains() get all VLAN domains
  * @method array get_vlan_domain(array('domain_id')) get VLANs in one domain
  * @method array get_vlan(array('vlan_ck')) get info for one VLAN
  * @method array get_rackspace(array()) get overall rackspace status
  * @method array get_rack(array('rack_id')) get info for a rack
  * @method array get_ipaddress(array('ip')) get info for a single IP address
- * @method array get_object(array('include_attrs' 'key_attrs_on' 'object_id' 'include_unset_attrs')) get one object
+ * @method array get_object(array('include_attrs', 'key_attrs_on', 'object_id', 'include_unset_attrs')) get one object
  * @method array get_object_allocation(array('object_id')) get the location of an object
- * @method array update_object_allocation(array('object_id' 'allocate_to')) update where an object is installed in rackspace
- * @method array link_entities(array('parent_entity_type' 'parent_entity_id' 'child_entity_type' 'child_entity_id')) link two entities (most often used for server / chassis mounting)
- * @method array add_object(array('object_type_id' 'virtual_objects' 'object_label' 'object_asset_no' 'object_name' 'taglist')) add one object
- * @method array edit_object(array('object_id' 'object_name' 'object_label' 'object_asset_no' 'object_comment', 'attr_*')) edit an existing object
- * @method array update_object_tags(array('taglist' 'object_id')) update user-defined tags for an object
- * @method array snmp_sync_object(array('object_id' 'ver' 'community' 'sec_name' 'sec_level' 'auth_protocol' 'auth_passphrase' 'priv_protocol' 'priv_passphrase')) sync a switch or PDU's ports using SNMP
- * @method array add_object_ip_allocation(array('bond_name' 'bond_type' 'ip' 'object_id')) update an object's IP address
+ * @method array update_object_allocation(array('object_id', 'allocate_to')) update where an object is installed in rackspace
+ * @method array link_entities(array('parent_entity_type', 'parent_entity_id', 'child_entity_type', 'child_entity_id')) link two entities (most often used for server / chassis mounting)
+ * @method array add_object(array('object_type_id', 'virtual_objects', 'object_label', 'object_asset_no', 'object_name', 'taglist')) add one object
+ * @method array edit_object(array('object_id', 'object_name', 'object_label', 'object_asset_no', 'object_comment', 'attr_*')) edit an existing object
+ * @method array update_object_tags(array('taglist', 'object_id')) update user-defined tags for an object
+ * @method array snmp_sync_object(array('object_id', 'ver', 'community', 'sec_name', 'sec_level', 'auth_protocol', 'auth_passphrase', 'priv_protocol', 'priv_passphrase')) sync a switch or PDU's ports using SNMP
+ * @method array add_object_ip_allocation(array('bond_name', 'bond_type', 'ip', 'object_id')) update an object's IP address
  * @method array delete_object_ip_allocation(array('object_id')) delete an IP address allocation for an object
- * @method array add_port(array('object_id' 'port_name' 'port_type_id' 'port_label' 'port_l2address')) add a port to an object
- * @method array delete_port(array('port_id' 'object_id')) delete a port from an object
- * @method array link_port(array('port' 'remote_port' 'cable')) link a port
+ * @method array add_port(array('object_id', 'port_name', 'port_type_id', 'port_label', 'port_l2address')) add a port to an object
+ * @method array delete_port(array('port_id', 'object_id')) delete a port from an object
+ * @method array link_port(array('port', 'remote_port', 'cable')) link a port
  * @method array unlink_port(array('port_id')) unlink a port
  * @method array get_port(array('port_id')) get data on a given port
  * @method array delete_object(array('object_id')) delete an object
- * @method array get_depot(array('include_attrs' 'key_attrs_on')) get all objects
+ * @method array get_depot(array('include_attrs', 'key_attrs_on')) get all objects
  * @method array get_attributes() get all available object attributes
  * @method array get_dictionary() get all chapters in the dictionary
- * @method array get_chapter(array('chapter_no' 'style')) get dictionary chapter
- * @method array add_chapter_entry(array('chapter_no' 'dict_value')) add en entry to a chapter
- * @method array delete_chapter_entry(array('chapter_no' 'dict_value')) delete an entry from a chapter
+ * @method array get_chapter(array('chapter_no', 'style')) get dictionary chapter
+ * @method array add_chapter_entry(array('chapter_no', 'dict_value')) add en entry to a chapter
+ * @method array delete_chapter_entry(array('chapter_no', 'dict_value')) delete an entry from a chapter
  * @method array add_domain(array('domain_description')) add a vlan domain
  * @method array delete_domain(array('domain_id')) remove a vlan domain by id
  * @method array get_domains() get a list of all the vlan domains
- * @method array add_vlan(array('domain_id' 'vlan_id' 'vlan_type' 'vlan_description')) add a vlan to specified domain
- * @method array delete_vlan(array('domain_id' 'vlan_id')) delete a vlan from a specified domain
+ * @method array add_vlan(array('domain_id', 'vlan_id', 'vlan_type', 'vlan_description')) add a vlan to specified domain
+ * @method array delete_vlan(array('domain_id', 'vlan_id')) delete a vlan from a specified domain
  * @method array get_vlans() get a list of all vlans within specified domain
  * @method array search(array('term')) perform a generic search
  */
