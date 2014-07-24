@@ -150,8 +150,6 @@ class sfRacktables
   {
     $ch = curl_init();
 
-    var_dump($this->url, $this->username, $this->password, $params);
-
     // Setup basic HTTP auth
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_USERPWD, $this->username.':'.$this->password);
