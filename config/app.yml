@@ -1,5 +1,5 @@
 all:
   racktables:
-    user: username
-    pass: password
-    url:  http://url-to-your-racktables/api.php
+    username: username
+    password: password
+    url:      http://url-to-your-racktables/api.php

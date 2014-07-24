@@ -150,6 +150,12 @@ class sfRacktables
   {
     $ch = curl_init();
 
+    var_dump($this->url, $this->username, $this->password, $params);
+
+    // Setup basic HTTP auth
+    curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+    curl_setopt($ch, CURLOPT_USERPWD, $this->username.':'.$this->password);
+
     curl_setopt($ch, CURLOPT_VERBOSE, 0);
     curl_setopt($ch, CURLOPT_FORBID_REUSE, true);
     curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -157,6 +163,8 @@ class sfRacktables
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
+
 
     $http_result = curl_exec($ch);
     $error       = curl_error($ch);
@@ -166,7 +174,8 @@ class sfRacktables
 
     if ($http_code != 200) {
       return array(
-        'error' => $error
+        'error' => $error,
+        'code' => $http_code
       );
     } else {
       return json_decode($http_result, true);
